@@ -1,0 +1,104 @@
+body {
+	font-family: 'Balsamiq Sans', cursive;
+	line-height: 1.5;
+	background-color: #f5f5ec;
+	color: black;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0 0 5px;
+}
+
+.main {
+	max-width: 50vw;
+	margin: 5vw auto;
+}
+
+.bayan {
+	color: #1662db;
+}
+
+.bayan:hover {
+	color: black;
+}
+
+.bayan:hover .bayan-data .bayan-close {
+	opacity: 1;
+}
+
+.bayan-item {
+	border-top: 0.1em solid rgba(0, 0, 0, 0.3);
+	padding: 0 1vh 2vh;
+}
+
+
+.bayan-input {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+.bayan-input:hover ~ .bayan-data .bayan-content {
+	display: block;
+}
+
+
+.bayan-data {
+	display: grid;
+	cursor: pointer;
+	grid-template-areas: 'title close' 'content content';
+	justify-content: space-between;
+
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.bayan-title {
+	grid-area: title;
+}
+.bayan-close {
+	grid-area: close;
+	text-align: right;
+}
+.bayan-content {
+	grid-area: content;
+}
+
+.bayan-data .bayan-close {
+	opacity: 0;
+}
+
+.bayan-content {
+	display: none;
+	font-size: 14px;
+	text-align: center;
+}
+.bayan-content img {
+	max-width: 50%;
+}
+
+.bayan-input:checked ~ .bayan-data {
+	color: black;
+}
+
+.bayan-input:checked ~ .bayan-data .bayan-close {
+	transform: rotate(90deg);
+	transform-origin: 97% center;
+}
+
+.bayan-input:hover ~ .bayan-data .bayan-close {
+	transform: rotate(90deg);
+	transform-origin: 97% center;
+}
+
+.bayan-input:checked ~ .bayan-data  .bayan-content {
+	display: block;
+}
+
+
